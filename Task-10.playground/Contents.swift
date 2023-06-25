@@ -1,12 +1,15 @@
 import UIKit
+func sentence(frase: String) -> String {
+    var wordsFrase = frase.components(separatedBy: " ")
 
-var frase = "Сьогодні цілий день буде дощити!"
+    print(wordsFrase.first)
 
-var wordsFrase = frase.components(separatedBy: " ")
+    var lastWord = wordsFrase.last
+    lastWord?.removeLast()
+    print(lastWord)
+    return frase
+}
 
-print(wordsFrase.first)
-
-var lastWord = wordsFrase.last
-lastWord?.removeLast()
-print(lastWord)
-
+print(sentence(frase: "Cьогодні буде дощити!"))
+print(sentence(frase: "Ти можеш завтра піти в магазин за хлібом?"))
+print(sentence(frase: "Ні не зможу!"))
